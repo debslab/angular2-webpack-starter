@@ -1,0 +1,12 @@
+@charset "utf-8";
+$icon-font-path: "../assets/bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span.active {
+  background-color: gray;
+}
