@@ -7,7 +7,7 @@
     "webpack",
     "typescript"
   ],
-  "author": "Debajyoti Maity",
+  "author": "Debajyoti Maity, Tapas Adhikary, Tanay Chowdhury",
   "homepage": "https://github.com/angularclass/angular2-webpack-starter",
   "license": "MIT",
   "scripts": {
