@@ -2,7 +2,7 @@
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-
+import {TranslateService} from 'ng2-translate';
 import { AppState } from './app.service';
 
 /*
@@ -47,18 +47,24 @@ import { AppState } from './app.service';
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
+    <div>{{ 'HELLO' | translate:param }}</div>
     <footer>
       <span>WebPack Angular 2 Starter</span>
     </footer>
   `
 })
 export class AppComponent {
+  param = {value: 'world'};
   name = 'Angular 2 boilerplate';
 
   constructor(
-    public appState: AppState) {
-
+    public appState: AppState, translate: TranslateService) {
+      var userLang = navigator.language; 
+      userLang = userLang.split("-")[0];
+      // this language will be used as a fallback when a translation isn't found in the current language
+      translate.setDefaultLang("en");
+      // the lang to use, if the lang isn't available, it will use the current loader to get them
+      translate.use(userLang);
   }
 
   ngOnInit() {

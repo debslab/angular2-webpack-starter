@@ -8,7 +8,7 @@
     "typescript"
   ],
   "author": "Debajyoti Maity, Tapas Adhikary, Tanay Chowdhury",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "homepage": "https://github.com/debslab/angular2-webpack-starter",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack --config config/webpack.dev.js --progress --profile",
@@ -78,6 +78,7 @@
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
     "ng2-bootstrap": "^1.1.16-9",
+    "ng2-translate": "^5.0.0",
     "rxjs": "^5.0.1",
     "zone.js": "^0.7.2"
   },
@@ -140,10 +141,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/debslab/angular2-webpack-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/debslab/angular2-webpack-starter/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
