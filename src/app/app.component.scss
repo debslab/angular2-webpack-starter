@@ -1,4 +1,6 @@
 @charset "utf-8";
+$fa-font-path: "../assets/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
 $icon-font-path: "../assets/bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 

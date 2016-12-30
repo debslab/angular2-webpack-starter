@@ -216,9 +216,13 @@ module.exports = function (options) {
       new CopyWebpackPlugin([
         { from: 'src/assets', to: 'assets' },
         {
-        from: 'node_modules/bootstrap-sass/assets/fonts/bootstrap',
-        to: 'assets/bootstrap-sass/assets/fonts/bootstrap',
-      }
+          from: 'node_modules/bootstrap-sass/assets/fonts/bootstrap',
+          to: 'assets/bootstrap-sass/assets/fonts/bootstrap',
+        },
+        {
+          from: 'node_modules/font-awesome/fonts',
+          to: 'assets/font-awesome/fonts',
+        }
       ]),
 
 
