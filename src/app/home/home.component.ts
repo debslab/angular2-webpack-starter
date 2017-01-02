@@ -21,6 +21,11 @@ import { XLarge } from './x-large';
 export class HomeComponent {
   // Set our default values
   localState = { value: '' };
+  clicks: number = 0;
+
+    count() {
+        this.clicks++;
+    }
   // TypeScript public modifiers
   constructor(public appState: AppState, public title: Title) {
 

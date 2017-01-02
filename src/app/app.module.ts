@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule,Http } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-
+import {ButtonModule} from 'primeng/components/button/button';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -47,6 +47,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    ButtonModule,
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
     TranslateModule.forRoot({
             provide: TranslateLoader,
