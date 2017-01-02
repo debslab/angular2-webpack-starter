@@ -48,7 +48,7 @@ type StoreType = {
     FormsModule,
     HttpModule,
     ButtonModule,
-    RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     TranslateModule.forRoot({
             provide: TranslateLoader,
             useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
