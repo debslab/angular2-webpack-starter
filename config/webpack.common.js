@@ -148,13 +148,13 @@ module.exports = function (options) {
         },
 
         {
-             test: /\.scss$/,
-             loaders: ['raw-loader', 'sass-loader']
+          test: /\.scss$/,
+          loaders: ['raw-loader', 'sass-loader']
         },
-       { 
+        { 
               test: /\.(woff2?|ttf|eot|svg)$/, 
               loader: 'url?limit=10000' 
-    },
+        },
       ],
 
     },
@@ -230,6 +230,10 @@ module.exports = function (options) {
         {
           from: 'node_modules/bootstrap-sass/assets/fonts/bootstrap',
           to: 'assets/bootstrap-sass/assets/fonts/bootstrap',
+        },
+        {
+          from: 'node_modules/font-awesome/css/font-awesome.min.css',
+          to: 'assets/font-awesome/css/font-awesome.min.css',
         },
         {
           from: 'node_modules/font-awesome/fonts',
