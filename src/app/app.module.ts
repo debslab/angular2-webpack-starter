@@ -30,6 +30,9 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 import {TranslateModule,TranslateLoader,TranslateStaticLoader} from 'ng2-translate';
+import '../styles/styles.scss';
+import '../styles/headings.css';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -41,6 +44,9 @@ type StoreType = {
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -61,10 +67,10 @@ type StoreType = {
     ButtonModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     TranslateModule.forRoot({
-            provide: TranslateLoader,
-            useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
-            deps: [Http]
-        })
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

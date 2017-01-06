@@ -57,7 +57,7 @@ import { AppState } from './app.service';
     </footer>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   param = {value: 'world'};
   name = 'Angular 2 boilerplate';
 
